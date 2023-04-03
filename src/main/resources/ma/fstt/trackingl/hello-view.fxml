@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="362.0" prefWidth="473.0" spacing="20.0" style="-fx-background-color: #85ab8b;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.fstt.trackingl.HelloController">
+    <padding>
+
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Gestion de livreur">
+         <font>
+            <Font name="Bodoni MT Black Italic" size="24.0" />
+         </font>
+      </Label>
+
+       <Label text="Nom :">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="nom" style="-fx-background-color: #cfe9db;">
+         <cursor>
+            <Cursor fx:constant="SW_RESIZE" />
+         </cursor></TextField>
+      <Label text="telephone : ">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="tele" style="-fx-background-color: #cfe9db;" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="ok" maxWidth="80.0" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+            <Button layoutX="10.0" layoutY="5.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Suppremer">
+
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <rotationAxis>
+                  <Point3D x="1.0" z="1.0" />
+               </rotationAxis>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Modifier" />
+         </children>
+      </HBox>
+      <TableView fx:id="mytable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cfe9db;">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="col_nom" prefWidth="75.0" text="nom" />
+            <TableColumn fx:id="col_tele" prefWidth="75.0" text="telephone" />
+        </columns>
+      </TableView>
+   </children>
+
+ 
+</VBox>
